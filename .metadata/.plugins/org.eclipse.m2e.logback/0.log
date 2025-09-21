@@ -217,3 +217,6 @@
 2025-09-21 22:42:59,072 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-09-21 22:42:59,073 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-09-21 22:42:59,075 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\SDP-CICD-DEVOPS\GALLERY-FULLSTACK\GALLERYAPI-SPRINGBOOT\src\test\resources
+2025-09-21 23:05:22,840 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-09-21 23:05:22,849 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-09-21 23:05:22,852 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\SDP-CICD-DEVOPS\GALLERY-FULLSTACK\GALLERYAPI-SPRINGBOOT\src\test\resources
