@@ -1,0 +1,21 @@
+package com.klef.model;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // already serving artist profile images
+        registry.addResourceHandler("/uploads_dir/**")
+                .addResourceLocations("file:uploads_dir/");
+        
+        registry.addResourceHandler("/uploads_artworks/**")
+        .addResourceLocations("file:uploads_artworks/");
+        
+        
+    }
+}

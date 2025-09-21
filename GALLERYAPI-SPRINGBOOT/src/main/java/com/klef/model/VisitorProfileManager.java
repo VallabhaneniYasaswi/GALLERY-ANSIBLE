@@ -27,7 +27,7 @@ public class VisitorProfileManager {
     @Autowired
     private JWTManager JWT;
 
-    // Create or update profile
+    // Create or update profile 
     public String createOrUpdateProfile(String token, String bio, String gender, MultipartFile imageFile) {
         var data = JWT.validateToken(token);
         if (data == null) return "401::Invalid token";
@@ -36,7 +36,7 @@ public class VisitorProfileManager {
         Users user = UR.findById(email).orElse(null);
         if (user == null || user.getRole() != 3) return "403::Unauthorized";
 
-        VisitorProfile profile = VPR.findByEmail(email);
+        VisitorProfile profile = VPR.findByEmail(email); 
         if (profile == null) profile = new VisitorProfile();
 
         profile.setEmail(email);

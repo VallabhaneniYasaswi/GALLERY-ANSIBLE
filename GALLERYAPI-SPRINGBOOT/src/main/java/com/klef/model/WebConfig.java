@@ -16,6 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/uploads_artworks/**")
         .addResourceLocations("file:uploads_artworks/");
         
-        
+        registry.addResourceHandler("/uploads_visitors/**")
+        .addResourceLocations("file:uploads_visitors/");
     }
 }
