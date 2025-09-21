@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(197, 166, 228);
+  color: rgb(207, 188, 188);
+  padding: 15px 30px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.logout-icon {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Users List Grid */
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Individual User Card */
+.user-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.user-card p {
+  margin: 6px 0;
+  font-size: 1em;
+  color: #2c3e50;
+}
+
+/* Actions Buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.actions button.delete-btn {
+  background-color: #b7458b;
+  color: white;
+}
+
+.actions button.delete-btn:hover {
+  background-color: #804a63;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.actions button:not(.delete-btn) {
+  background-color: #2980b9;
+  color: white;
+}
+
+.actions button:not(.delete-btn):hover {
+  background-color:#5573b9;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .users-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
