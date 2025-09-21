@@ -1,0 +1,225 @@
+/* Base page styling */
+.base {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  height: 75px;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.signContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.sign {
+  height: 30px;
+  margin-right: 5px;
+}
+.signText {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Popup overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup window */
+.popupWindow {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+
+/* Response messages */
+.responseMsg {
+  margin-top: 10px;
+  color: red;
+}
+
+/* Container text */
+.container {
+  margin-top: 50px;
+}
+.text1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.text2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+.logo {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.signContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.signContainer:hover {
+  transform: scale(1.05);
+}
+
+.sign {
+  height: 32px;
+  margin-right: 8px;
+}
+
+.signText {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.container {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.text1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.text2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.text3 {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Art Display Section */
+.art-display-section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.art-display-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.art-display-section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #222;
+  display: block;
+  margin: 10px auto;
+}
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.artwork-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artwork-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.artwork-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.artwork-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 5px;
+}
+
+.artwork-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,5 @@
+package com.klef.model;
+
+public class EmailManager {
+
+}
