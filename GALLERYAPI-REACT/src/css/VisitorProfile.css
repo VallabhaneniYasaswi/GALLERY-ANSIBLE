@@ -1,0 +1,152 @@
+/* General Styling */
+
+/* Visitor Profile Section */
+.profile-container {
+  background-color: #fff;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.profile-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+}
+
+.profile-container .profile-image {
+  display: block;
+  margin: 0 auto 25px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.profile-container p strong {
+  color: #555;
+}
+
+.profile-container div {
+  margin-bottom: 20px;
+}
+
+.profile-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.profile-container textarea,
+.profile-container select,
+.profile-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container textarea:focus,
+.profile-container select:focus,
+.profile-container input[type="file"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.profile-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.profile-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.profile-container button:first-of-type {
+  background-color: #5badac;
+  color: white;
+}
+
+.profile-container button:first-of-type:hover {
+  background-color: #00b39b;
+  transform: translateY(-2px);
+}
+
+.profile-container button[style*="background-color: red"] {
+  background-color: #dc3545 !important;
+}
+
+.profile-container button[style*="background-color: red"]:hover {
+  background-color: #c82333 !important;
+  transform: translateY(-2px);
+}
+
+.profile-container .msg {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9f7ef;
+  color: #28a745;
+  border: 1px solid #d4edda;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar .user-section {
+    margin-top: 15px;
+  }
+
+  .profile-container {
+    margin: 20px auto;
+    padding: 25px 20px;
+  }
+
+  .profile-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .username {
+    display: none; /* Hide username on very small screens if needed */
+  }
+
+  .profile-container button {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+  }
+}

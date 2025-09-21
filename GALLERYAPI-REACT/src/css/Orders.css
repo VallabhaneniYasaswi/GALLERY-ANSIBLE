@@ -1,0 +1,130 @@
+/* Orders.css */
+
+/* Page container */
+.cart-page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #ffffff, #f7f8fa);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Page heading */
+.cart-page h2 {
+  font-size: 2.8em;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-page h2::after {
+  content: '📦';
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+}
+
+/* Empty state */
+.cart-page p {
+  font-size: 1.1em;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+/* Orders list container */
+.cart-list {
+  margin-top: 30px;
+}
+
+/* Each order card */
+.cart-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Order info */
+.cart-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.7em;
+  color: #34495e;
+}
+
+.cart-info p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.cart-info ul {
+  padding-left: 20px;
+  margin: 5px 0;
+  list-style-type: disc;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Status badge */
+.cart-info p:first-of-type {
+  font-weight: 600;
+}
+
+.cart-info p:first-of-type::before {
+  content: 'Status: ';
+  font-weight: 600;
+}
+
+/* Total amount styling */
+.cart-info p:nth-of-type(2) {
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-card {
+    padding: 20px;
+  }
+
+  .cart-info h3 {
+    font-size: 1.5em;
+  }
+
+  .cart-info p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-page {
+    padding: 25px;
+  }
+
+  .cart-page h2 {
+    font-size: 2em;
+  }
+
+  .cart-info h3 {
+    font-size: 1.3em;
+  }
+
+  .cart-info p, .cart-info ul {
+    font-size: 0.95em;
+  }
+}
