@@ -1,0 +1,145 @@
+/* General Body Styles */
+/* body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f4f7f6; 
+  color: #333;
+}
+
+.navbar-container {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 40px; 
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: #555;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.profile-link:hover {
+  color: #007bff; 
+}
+
+.username {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logout-icon {
+  height: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+} */
+
+.logout-icon:hover {
+  opacity: 1;
+}
+
+/* Artist List Section */
+.artist-list-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.artist-list-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.msg {
+  text-align: center;
+  color: #28a745; /* Green for success messages */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.artist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.artist-card {
+  background-color: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.artist-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Circular images for artists */
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #875696; /* A subtle border */
+  box-shadow: 0 0 0 5px rgba(208, 168, 209, 0.1); /* Glow effect */
+}
+
+.artist-info h3 {
+  margin-top: 0;
+  color:  #875696;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+
+.artist-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .user-section {
+    margin-top: 10px;
+  }
+  .profile-link {
+    margin: 0 10px;
+  }
+  .artist-list-page {
+    padding: 20px;
+  }
+  .artist-list {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
