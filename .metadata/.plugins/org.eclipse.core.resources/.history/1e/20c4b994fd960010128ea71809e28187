@@ -1,0 +1,20 @@
+spring.application.name=GALLERYAPI-SPRINGBOOT
+server.port=7007
+
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/gallerydb
+spring.datasource.username=root
+spring.datasource.password=ROOT
+# folder where images will be uploaded
+upload.dir=uploads
+
+spring.jpa.hibernate.ddl-auto=update
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=yasaswivallabhaneni11@gmail.com
+spring.mail.password=psvt kvzw jxkr hwuj
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+

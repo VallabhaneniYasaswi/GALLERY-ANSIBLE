@@ -1,0 +1,295 @@
+/* General Body and Container Styling */
+body {
+    background-color: #f0f2f5; /* Light grey background for the whole page */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Modern font */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.artwork-manager {
+    max-width: 1100px; /* Slightly wider */
+    margin: 50px auto; /* More vertical margin */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+    transition: all 0.3s ease;
+}
+
+/* Header Styling */
+.artwork-manager h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 50px; /* More space below header */
+    font-size: 2.8em; /* Larger font size */
+    font-weight: 800; /* Bolder */
+    position: relative;
+    letter-spacing: -0.02em; /* Tighter letter spacing */
+}
+
+.artwork-manager h2::after {
+    content: '';
+    width: 90px; /* Wider underline */
+    height: 5px; /* Thicker underline */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradient underline */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px; /* Lower underline */
+    border-radius: 3px;
+}
+
+/* Add Artwork Form */
+.add-artwork-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adaptable columns */
+    gap: 20px; /* Increased gap */
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #fcfcfc; /* Very light background */
+    border: 1px solid #e9ebee; /* Subtle border */
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    align-items: end; /* Align items to the bottom */
+}
+
+.add-artwork-form div { /* Wrapper for label and input */
+    display: flex;
+    flex-direction: column;
+}
+
+.add-artwork-form label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.add-artwork-form input[type="text"],
+.add-artwork-form input[type="number"],
+.add-artwork-form input[type="file"] {
+    width: 100%;
+    padding: 14px 18px; /* More padding */
+    border: 1px solid #dce1e6;
+    border-radius: 10px; /* More rounded */
+    font-size: 1.05em;
+    color: #555;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fcfdff;
+}
+
+.add-artwork-form input[type="file"] {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.add-artwork-form input::placeholder {
+    color: #aeb4bc;
+}
+
+.add-artwork-form input:focus {
+    border-color: #2193b0; /* Focus color */
+    box-shadow: 0 0 0 4px rgba(33, 147, 176, 0.15); /* Softer, broader focus shadow */
+    outline: none;
+    background-color: #fff;
+}
+
+.add-artwork-form button {
+    grid-column: span var(--button-span, 1);
+    padding: 15px 30px; /* More padding */
+    background: linear-gradient(to right, #2ecc71, #27ae60); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 10px; /* More rounded */
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.25); /* Stronger shadow */
+    letter-spacing: 0.02em;
+}
+
+.add-artwork-form button:hover {
+    background: linear-gradient(to right, #27ae60, #229a55);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.35);
+}
+
+/* Error/Message Paragraph */
+p.msg { /* Added a class for clarity */
+    text-align: center;
+    margin-top: -30px; /* Adjust margin */
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #d96db8;
+    font-weight: 600;
+    background-color: #ffe8e6; /* Light red background for messages */
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block; /* To contain background */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.1);
+}
+
+
+/* Artworks List */
+.artworks-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Larger min width */
+    gap: 35px; /* Increased gap */
+    margin-top: 40px;
+}
+
+/* Artwork Card */
+.artwork-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ebee;
+    border-radius: 16px; /* More rounded */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother animation */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.artwork-card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.artwork-card img {
+    width: 100%;
+    height: 250px; /* Slightly taller images */
+    object-fit: cover;
+    border-bottom: 1px solid #f0f2f5;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.artwork-card .info-section {
+    padding: 20px 25px; /* More internal padding */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.artwork-card h3 {
+    font-size: 1.7em; /* Larger title */
+    color: #34495e;
+    margin: 0 0 8px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.artwork-card p {
+    font-size: 1em; /* Slightly larger description */
+    color: #7f8c8d;
+    margin: 0 0 15px;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1; /* Allows description to take up available space */
+}
+
+.artwork-card .price { /* Specific style for price */
+    font-weight: 700; /* Bolder price */
+    color: #2193b0; /* Accent color for price */
+    font-size: 1.2em; /* Larger price */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.artwork-card button {
+    width: calc(100% - 50px); /* Full width minus padding */
+    margin: 0 25px 25px; /* Centered with side margins */
+    padding: 14px 20px; /* More padding */
+    background: linear-gradient(to right, #d169c1, #7e4889); /* Gradient delete button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.2);
+    align-self: center;
+    letter-spacing: 0.02em;
+}
+
+.artwork-card button:hover {
+    background: linear-gradient(to right, #d169c1, #d169c1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .artwork-manager {
+        margin: 30px auto;
+        padding: 30px;
+    }
+    .artwork-manager h2 {
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+    .add-artwork-form {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    .add-artwork-form button {
+        grid-column: 1;
+    }
+    .artworks-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    .artwork-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .artwork-manager {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    .artwork-manager h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .add-artwork-form {
+        gap: 15px;
+        padding: 20px;
+    }
+    .add-artwork-form input,
+    .add-artwork-form button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    .artworks-list {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 20px;
+    }
+    .artwork-card .info-section {
+        padding: 15px 20px;
+    }
+    .artwork-card h3 {
+        font-size: 1.4em;
+    }
+    .artwork-card p {
+        font-size: 0.9em;
+    }
+    .artwork-card .price {
+        font-size: 1.1em;
+    }
+    .artwork-card button {
+        width: calc(100% - 40px);
+        margin: 0 20px 20px;
+    }
+}

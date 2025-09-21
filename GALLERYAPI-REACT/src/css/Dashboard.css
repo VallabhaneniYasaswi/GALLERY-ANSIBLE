@@ -1,0 +1,111 @@
+.dashboard {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.logo {
+  height: 40px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.logout-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.dashboard-content {
+  padding: 20px;
+}
+.dashboard {
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(197, 166, 228);
+  color: rgb(207, 188, 188);
+  padding: 15px 30px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.logout-icon {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1);
+}
+
+.dashboard-content {
+  padding: 20px;
+}
+
+.artist-dashboard {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+.card {
+  background: #ebb9de;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(196, 8, 8, 0.1);
+}
+.profile-link {
+  cursor: pointer;
+  margin-left: 15px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.profile-link:hover {
+  color: #630622; /* Blue hover effect */
+  text-decoration: underline;
+}
