@@ -65,7 +65,7 @@ const ArtworkManager = () => {
     if(imageFile) formData.append("image", imageFile);
 
     const url = editingId ? `${BASEURL}artist/artworks/update/${editingId}` : `${BASEURL}artist/artworks/add`;
-    const method = editingId ? "POST" : "POST"; // backend uses POST for update
+    const method = editingId ? "PUT" : "POST"; // backend uses POST for update
 
     fetch(url, {
       method,
