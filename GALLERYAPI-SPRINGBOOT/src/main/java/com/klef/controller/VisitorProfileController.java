@@ -14,6 +14,11 @@ public class VisitorProfileController {
 
     @Autowired
     VisitorProfileManager VPM;
+    
+    @PostMapping("/")
+    public String visitor() {
+        return "Visitor Profile Data";
+    }
 
     @PostMapping("/profile")
     public String createOrUpdateProfile(

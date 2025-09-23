@@ -20,6 +20,12 @@ public class VisitorCommerceController {
     private VisitorCommerceManager manager;
 
     // -------------------- CART --------------------
+    
+    @PostMapping("/")
+    public String visitor() {
+        return "Visitor cart, order, wishlist, Data";
+    }
+    
     @PostMapping("/cart/add")
     public String addToCart(@RequestHeader("Authorization") String token,
                             @RequestParam Long artworkId,

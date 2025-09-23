@@ -15,6 +15,11 @@ public class AdminController {
 
     @Autowired
     UsersManager UM;
+    
+    @PostMapping("/")
+    public String Admin() {
+        return "Admin Data";
+    }
 
     // Get all users
     @GetMapping("/users")

@@ -14,6 +14,11 @@ public class VisitorController {
 
     @Autowired
     private ArtistService artistService;
+    
+    @PostMapping("/")
+    public String visi() {
+        return "Visitor's Artist profile view Data";
+    }
 
     @GetMapping("/artists")
     public List<ArtistProfile> getArtists() {

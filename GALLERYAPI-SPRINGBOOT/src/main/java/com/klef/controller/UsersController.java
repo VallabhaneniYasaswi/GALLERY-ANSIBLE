@@ -15,6 +15,11 @@ public class UsersController {
     @Autowired
     UsersManager UM;
     
+    @PostMapping("/")
+    public String signUp() {
+        return "Users Data";
+    }
+    
     @PostMapping("/signup")
     public String signUp(@RequestBody Users U) {
         return UM.addUser(U);

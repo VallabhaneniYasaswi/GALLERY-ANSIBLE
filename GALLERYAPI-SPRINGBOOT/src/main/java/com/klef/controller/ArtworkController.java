@@ -16,6 +16,11 @@ public class ArtworkController {
 
     @Autowired
     ArtworkManager AM;
+    
+    @PostMapping("/")
+    public String Artwork() {
+        return "Artwork Data";
+    }
 
     @PostMapping("/add")
     public String addArtwork(@RequestHeader("Authorization") String token,
