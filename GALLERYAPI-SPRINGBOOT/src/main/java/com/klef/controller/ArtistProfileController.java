@@ -15,7 +15,7 @@ public class ArtistProfileController {
     @Autowired
     ArtistProfileManager APM;
     
-    @PostMapping("/")
+    @GetMapping("/")
     public String artist() {
         return "Artist Profile Data";
     }

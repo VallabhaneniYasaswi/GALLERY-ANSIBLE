@@ -15,7 +15,7 @@ public class UsersController {
     @Autowired
     UsersManager UM;
     
-    @PostMapping("/")
+    @GetMapping("/")
     public String signUp() {
         return "Users Data";
     }

@@ -17,9 +17,9 @@ public class ArtworkController {
     @Autowired
     ArtworkManager AM;
     
-    @PostMapping("/")
-    public String Artwork() {
-        return "Artwork Data";
+    @GetMapping("/")
+    public String signUp() {
+        return "Users Data";
     }
 
     @PostMapping("/add")

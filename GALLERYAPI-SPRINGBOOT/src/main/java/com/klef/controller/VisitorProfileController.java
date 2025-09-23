@@ -15,7 +15,7 @@ public class VisitorProfileController {
     @Autowired
     VisitorProfileManager VPM;
     
-    @PostMapping("/")
+    @GetMapping("/")
     public String visitor() {
         return "Visitor Profile Data";
     }
